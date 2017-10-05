@@ -1,3 +1,5 @@
+#Robert Lambert lambert.r@gmail.com
+#2017
 import cv2
 import numpy as np
 import pylab as plb
