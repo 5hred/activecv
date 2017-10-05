@@ -1,4 +1,4 @@
-# activecvS
+# activecv
 using openCV python to create fft from Axis stream
 
 The goal will be to create an open source acccess control system based on wigend and open hardware
