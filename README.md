@@ -1,4 +1,4 @@
-# axiscv
+# activecvS
 using openCV python to create fft from Axis stream
 
 The goal will be to create an open source acccess control system based on wigend and open hardware
@@ -10,5 +10,3 @@ the following will be the overall design:
         - Use camera loction/id to activate lock
         - Use other image detection to activate functions
         - all in app commands information to generate qr codes
-
-        
