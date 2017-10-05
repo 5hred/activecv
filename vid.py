@@ -6,7 +6,7 @@ import pylab as plb
 
 #Cap is an instance of open cv VideoCapture
 cap = cv2.VideoCapture('http://root.root@192.168.0.19/video.cg')
-#loop the action to keep the app open
+
 """
 
 parms = dict(hsv,
@@ -16,6 +16,8 @@ parms = dict(hsv,
              upper_red)
 
 """
+
+#loop the action to keep the app open
 while(1):
     # Take each frame
     _, frame = cap.read()
