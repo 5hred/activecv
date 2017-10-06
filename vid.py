@@ -1,11 +1,12 @@
 #Robert Lambert lambert.r@gmail.com
 #2017
+from scipy  import  fftpack
 import cv2
 import numpy as np
 import pylab as plb
 
 #Cap is an instance of open cv VideoCapture
-cap = cv2.VideoCapture('http://root.root@192.168.0.19/video.cg')
+cap = cv2.VideoCapture(0)
 
 """
 
@@ -38,18 +39,24 @@ while(1):
     cv2.imshow('mask',mask)
     cv2.imshow('res',res)
     k = cv2.waitKey(5) & 0xFF
-    #Convert the image to a array
-    a = np.asarray(frame)
-    #fft on the array
-    b = abs(np.fft.rfft2(a))
-    #plot the fft
-    plb.figure(1)
-    plb.clf()
-    plb.imshow( b )
-    plb.show()
+
+    def sciencefft():
+        #Convert the image to a array
+        fa = fftpack.fft2(frame)
+        #fft on the array
+        fb = fftpack.fftshift( fa )
+        #plot the fft
+        psf2D = np.abs( fb )**2
+        #plot the power spectrum
+        plb.figure(1)
+        plb.clf()
+        plb.imshow( psf2D )
+        plb.show()
 
     #fig, ax = plt.subplots()
     #ax.plot(xf,)
+
+    sciencefft()
 
     if k == 27:
         break
